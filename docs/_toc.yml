@@ -1,0 +1,38 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: intro
+chapters:
+- file: installation 
+- file: architecture
+  sections:
+    - file: architecture/population
+    - file: architecture/algorithm
+    - file: architecture/individual
+    - file: architecture/fitness
+    - file: architecture/creator
+    - file: architecture/termination-checker
+    - file: architecture/evaluator
+    - file: architecture/breeder
+    - file: architecture/operator
+      sections:
+        - file: architecture/operator/selection
+        - file: architecture/operator/genetic-operator
+        - file: architecture/operator/failable-operator
+    - file: architecture/statistics
+- file: examples
+  sections:
+    - file: examples/one-max
+    - file: examples/knapsack
+    - file: examples/basic-symbolic-regression
+    - file: examples/multiplexer
+    - file: examples/sklearn-symbolic-regression
+    - file: examples/breast-cancer
+    - file: examples/nsga2
+- file: advanced
+  sections:
+    - file: advanced/custom
+    - file: advanced/concurrency
+    - file: advanced/random
+- file: contribution

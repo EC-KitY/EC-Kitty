@@ -58,7 +58,7 @@ class SimpleEvolution(Algorithm):
             Maximal number of worker nodes for the Executor object that
             evaluates the fitness of the individuals.
 
-    rng: RNG
+    random_generator: RNG
             Random number generator
 
     random_seed: int, default=current system time

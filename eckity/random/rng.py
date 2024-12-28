@@ -12,7 +12,7 @@ class RNG:
     Example:
     class TorchRNG(RNG):
         @override
-        def set_seed(self, seed: int]) -> None:
+        def set_seed(self, seed: int) -> None:
             super().set_seed(seed)
             torch.manual_seed(seed)
     """
