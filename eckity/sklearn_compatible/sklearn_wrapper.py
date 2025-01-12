@@ -1,7 +1,8 @@
+from sklearn.base import BaseEstimator
 from sklearn.utils.validation import check_is_fitted, check_X_y
 
 
-class SklearnWrapper:
+class SklearnWrapper(BaseEstimator):
     """
     Sklearn-compatible wrapper to support evolution using sklearn methods.
 

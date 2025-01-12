@@ -20,5 +20,5 @@ setup(
     },
     license='GNU GPLv3',
     packages=find_packages(),
-    install_requires=["numpy>=1.24.0", "overrides>=7.0.0", "pandas>=0.25.2"],
+    install_requires=["numpy>=1.23.0", "overrides>=7.0.0", "pandas>=0.25.2"],
 )

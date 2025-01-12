@@ -11,17 +11,15 @@ Currently we have implemented Genetic Algorithm (GA) and tree-based Genetic Prog
 **EC-KitY** is:
 - A comprehensive toolkit for running evolutionary algorithms
 - Written in Python
-- Can work with or without scikit-learn, i.e., supports both sklearn and non-sklearn modes
+- Can work with or without scikit-learn, i.e., supports both sklearn (ML) and non-sklearn (basic) modes
 - Designed with modern software engineering in mind
 - Designed to support all popular EC paradigms (GA, GP, ES, coevolution, multi-objective, etc').
 
 ### Dependencies
 The minimal Python Version for EC-KitY is Python 3.8
 
-The dependencies of our package are described in `requirements.txt` 
-
-For sklearn mode, EC-KitY additionally requires:
-- scikit-learn (>=1.1)
+The dependencies of our base package are described in `requirements.txt` 
+In addition, the dependencies of the ML mode are described in `requirements-ml.txt` 
 
 ### User installation
 

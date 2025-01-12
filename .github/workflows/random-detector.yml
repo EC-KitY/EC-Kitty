@@ -18,11 +18,17 @@ jobs:
       - name: Scan for 'random' in changed files
         id: random-detector
         run: |
-          git diff HEAD..origin/main | grep -i -n "random" > detections.txt
-          if [ -s detections.txt ]; then
-            cat detections.txt
-            echo "RANDOM_DETECTED=true" >> $GITHUB_OUTPUT
-          fi
+            # Run git diff between the latest commit and origin/main and filter for lines starting with + or -
+            touch detections.txt
+            git diff HEAD..origin/main | grep -i -E '^[+-].*random.*' > detections.txt
+
+            # Check if detections.txt has any content
+            if [ -s detections.txt ]; then
+                cat detections.txt
+                echo "RANDOM_DETECTED=true" >> $GITHUB_OUTPUT
+            else
+                echo "No 'random' found in changed lines"
+            fi
 
       - name: Comment PR
         if: ${{ steps.random-detector.outputs.RANDOM_DETECTED == 'true' }}
